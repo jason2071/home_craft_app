@@ -9,27 +9,27 @@ class CategoryModel {
 List<CategoryModel> categories = [
   CategoryModel(
     id: "1",
-    title: "Sofa",
+    title: "Living Room",
     imageSrc: "assets/images/icon_couch.png",
   ),
   CategoryModel(
     id: "2",
-    title: "Lamp",
+    title: "Bedroom",
     imageSrc: "assets/images/icon_electronic_lamp.png",
   ),
   CategoryModel(
     id: "3",
-    title: "Bathtub",
+    title: "Bathroom",
     imageSrc: "assets/images/icon_bathtub.png",
   ),
   CategoryModel(
     id: "4",
-    title: "Desk",
-    imageSrc: "assets/images/icon_education_desk.png",
+    title: "Kitchen",
+    imageSrc: "assets/images/icon_kitchen.png",
   ),
   CategoryModel(
     id: "5",
-    title: "Chandelier",
+    title: "Downstairs",
     imageSrc: "assets/images/icon_chandelier.png",
   ),
 ];

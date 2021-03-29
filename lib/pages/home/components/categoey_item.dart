@@ -34,7 +34,7 @@ class CategoryItem extends StatelessWidget {
               style: TextStyle(
                 fontSize: 14,
                 fontWeight: FontWeight.w600,
-                height: 1,
+                height: 0.8,
               ),
             ),
           ],
