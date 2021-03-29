@@ -20,21 +20,21 @@ class CategoryItem extends StatelessWidget {
           color: Colors.white,
           shape: BoxShape.circle,
         ),
-        padding: EdgeInsets.all(20),
+        padding: EdgeInsets.all(25),
         margin: EdgeInsets.only(right: 20),
         child: Column(
           children: [
             Image.asset(
               imageSrc,
-              width: 80,
-              height: 80,
+              width: 70,
+              height: 70,
             ),
             Text(
               title,
               style: TextStyle(
                 fontSize: 14,
                 fontWeight: FontWeight.w600,
-                height: 0.8,
+                height: 1,
               ),
             ),
           ],
