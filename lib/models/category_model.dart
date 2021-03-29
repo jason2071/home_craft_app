@@ -9,7 +9,7 @@ class CategoryModel {
 List<CategoryModel> categories = [
   CategoryModel(
     id: "1",
-    title: "Living Room",
+    title: "Livingroom",
     imageSrc: "assets/images/icon_couch.png",
   ),
   CategoryModel(

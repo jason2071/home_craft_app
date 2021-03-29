@@ -43,7 +43,7 @@ class ProductItem extends StatelessWidget {
                   child: Text(
                     title,
                     style: TextStyle(
-                      fontSize: 16,
+                      fontSize: getProportionateScreenWidth(16),
                       fontWeight: FontWeight.w600,
                     ),
                     maxLines: 2,
@@ -57,7 +57,7 @@ class ProductItem extends StatelessWidget {
                   child: Text(
                     "\$$prize",
                     style: TextStyle(
-                      fontSize: 16,
+                      fontSize: getProportionateScreenWidth(16),
                       fontWeight: FontWeight.w900,
                     ),
                     maxLines: 1,

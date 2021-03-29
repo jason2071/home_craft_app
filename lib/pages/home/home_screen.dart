@@ -46,14 +46,13 @@ class _HomeScreenState extends State<HomeScreen> {
                 child: Text(
                   "Explore",
                   style: TextStyle(
-                    fontSize: 24,
+                    fontSize: getProportionateScreenWidth(20),
                     fontWeight: FontWeight.w700,
                   ),
                 ),
               ),
-              SizedBox(height: 20),
               Padding(
-                padding: EdgeInsets.only(left: 20),
+                padding: EdgeInsets.only(left: 10, top: 10),
                 child: SingleChildScrollView(
                   scrollDirection: Axis.horizontal,
                   child: Row(
@@ -71,13 +70,13 @@ class _HomeScreenState extends State<HomeScreen> {
                 ),
               ),
               Padding(
-                padding: EdgeInsets.symmetric(vertical: 20, horizontal: 20),
+                padding: EdgeInsets.symmetric(vertical: 10, horizontal: 20),
                 child: Row(
                   children: [
                     Text(
                       "101 Products",
                       style: TextStyle(
-                        fontSize: 16,
+                        fontSize: getProportionateScreenWidth(16),
                         fontWeight: FontWeight.w600,
                       ),
                     ),
@@ -90,7 +89,7 @@ class _HomeScreenState extends State<HomeScreen> {
                             Text(
                               "Popular",
                               style: TextStyle(
-                                fontSize: 18,
+                                fontSize: getProportionateScreenWidth(16),
                                 fontWeight: FontWeight.w700,
                               ),
                             ),
@@ -101,7 +100,7 @@ class _HomeScreenState extends State<HomeScreen> {
                         ),
                       ),
                     ),
-                    SizedBox(width: 20),
+                    SizedBox(width: 10),
                     GestureDetector(
                       onTap: () {
                         setState(() {

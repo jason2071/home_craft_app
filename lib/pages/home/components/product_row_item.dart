@@ -24,9 +24,10 @@ class ProductRowItem extends StatelessWidget {
             ClipRRect(
               borderRadius: BorderRadius.circular(8),
               child: Image.network(
-                "https://cdn.pixabay.com/photo/2017/03/28/12/11/chairs-2181960_960_720.jpg",
+                data.cover,
                 fit: BoxFit.cover,
-                height: 300,
+                width: double.infinity,
+                height: getProportionateScreenHeight(300),
               ),
             ),
             SizedBox(height: 10),
@@ -39,7 +40,7 @@ class ProductRowItem extends StatelessWidget {
                     child: Text(
                       data.title,
                       style: TextStyle(
-                        fontSize: 18,
+                        fontSize: getProportionateScreenWidth(16),
                         fontWeight: FontWeight.w700,
                       ),
                       maxLines: 2,
@@ -57,7 +58,7 @@ class ProductRowItem extends StatelessWidget {
               child: Text(
                 "\$${data.prize}",
                 style: TextStyle(
-                  fontSize: 18,
+                  fontSize: getProportionateScreenWidth(16),
                   fontWeight: FontWeight.w900,
                 ),
                 maxLines: 1,

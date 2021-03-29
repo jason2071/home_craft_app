@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:home_craft_app/size_config.dart';
 
 class CategoryItem extends StatelessWidget {
   const CategoryItem({
@@ -20,19 +21,19 @@ class CategoryItem extends StatelessWidget {
           color: Colors.white,
           shape: BoxShape.circle,
         ),
-        padding: EdgeInsets.all(25),
-        margin: EdgeInsets.only(right: 20),
+        padding: EdgeInsets.all(15),
+        margin: EdgeInsets.only(right: 10),
         child: Column(
           children: [
             Image.asset(
               imageSrc,
-              width: 70,
-              height: 70,
+              width: 50,
+              height: 50,
             ),
             Text(
               title,
               style: TextStyle(
-                fontSize: 14,
+                fontSize: getProportionateScreenWidth(12),
                 fontWeight: FontWeight.w600,
                 height: 1,
               ),
