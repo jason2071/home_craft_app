@@ -1,17 +1,16 @@
 import 'package:flutter/material.dart';
+import 'package:home_craft_app/models/product_model.dart';
 
 import '../../../size_config.dart';
 
 class ProductRowItem extends StatelessWidget {
   const ProductRowItem({
     Key key,
-    this.imageSrc,
-    this.title,
-    this.prize,
     this.onPressed,
+    this.data,
   }) : super(key: key);
 
-  final String imageSrc, title, prize;
+  final ProductModel data;
   final Function onPressed;
 
   @override
@@ -24,11 +23,10 @@ class ProductRowItem extends StatelessWidget {
           children: [
             ClipRRect(
               borderRadius: BorderRadius.circular(8),
-              child: Image.asset(
-                imageSrc,
+              child: Image.network(
+                "https://cdn.pixabay.com/photo/2017/03/28/12/11/chairs-2181960_960_720.jpg",
                 fit: BoxFit.cover,
                 height: 300,
-                width: double.infinity,
               ),
             ),
             SizedBox(height: 10),
@@ -39,7 +37,7 @@ class ProductRowItem extends StatelessWidget {
                   SizedBox(
                     width: SizeConfig.screenWidth * 0.83,
                     child: Text(
-                      title,
+                      data.title,
                       style: TextStyle(
                         fontSize: 18,
                         fontWeight: FontWeight.w700,
@@ -57,7 +55,7 @@ class ProductRowItem extends StatelessWidget {
             Container(
               padding: EdgeInsets.symmetric(horizontal: 10),
               child: Text(
-                "\$$prize",
+                "\$${data.prize}",
                 style: TextStyle(
                   fontSize: 18,
                   fontWeight: FontWeight.w900,

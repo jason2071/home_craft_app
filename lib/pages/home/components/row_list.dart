@@ -1,8 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:home_craft_app/models/product_model.dart';
 import 'package:home_craft_app/pages/home/components/product_row_item.dart';
 
 class RowList extends StatelessWidget {
-  const RowList({Key key}) : super(key: key);
+  const RowList({Key key, this.data}) : super(key: key);
+
+  final List<ProductModel> data;
 
   @override
   Widget build(BuildContext context) {
@@ -16,17 +19,12 @@ class RowList extends StatelessWidget {
       child: SingleChildScrollView(
         child: Column(
           children: [
-            ProductRowItem(
-              imageSrc: "assets/images/furniture/minimal-923194_1920.jpeg",
-              title: "ชุดโต๊ะอาหาร Lamoon W150 - เก้าอี้Waku 150 X 80 X 75 Cm",
-              prize: "19,720",
-              onPressed: () {},
-            ),
-            ProductRowItem(
-              imageSrc: "assets/images/furniture/minimal-923194_1920.jpeg",
-              title: "ชุดโต๊ะอาหาร Lamoon W150 - เก้าอี้Waku 150 X 80 X 75 Cm",
-              prize: "19,720",
-              onPressed: () {},
+            ...List.generate(
+              data.length,
+              (index) => ProductRowItem(
+                data: data[index],
+                onPressed: () {},
+              ),
             ),
           ],
         ),

@@ -1,11 +1,15 @@
 import 'package:flutter/material.dart';
+import 'package:home_craft_app/models/product_model.dart';
 
 import 'product_item.dart';
 
 class GridList extends StatelessWidget {
   const GridList({
     Key key,
+    this.data,
   }) : super(key: key);
+
+  final List<ProductModel> data;
 
   @override
   Widget build(BuildContext context) {

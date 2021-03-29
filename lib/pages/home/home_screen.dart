@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:home_craft_app/constants.dart';
 import 'package:home_craft_app/models/category_model.dart';
+import 'package:home_craft_app/models/product_model.dart';
 import 'package:home_craft_app/size_config.dart';
 import 'components/categoey_item.dart';
 import 'components/grid_list.dart';
@@ -131,8 +132,8 @@ class _HomeScreenState extends State<HomeScreen> {
                   ],
                 ),
               ),
-              if (_gridMode) Expanded(child: GridList()),
-              if (!_gridMode) Expanded(child: RowList()),
+              if (_gridMode) Expanded(child: GridList(data: productList)),
+              if (!_gridMode) Expanded(child: RowList(data: productList)),
             ],
           ),
         ),
