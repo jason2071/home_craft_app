@@ -5,7 +5,7 @@ ThemeData themData() {
   return ThemeData(
     primaryColor: kPrimaryColor,
     accentColor: kPrimaryColor,
-    scaffoldBackgroundColor: kBackgroundColor,
+    scaffoldBackgroundColor: Colors.white,
     appBarTheme: appBarTheme(),
   );
 }

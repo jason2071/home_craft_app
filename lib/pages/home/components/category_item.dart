@@ -23,7 +23,7 @@ class CategoryItem extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Container(
-            width: getProportionateScreenWidth(150),
+            width: getProportionateScreenWidth(120),
             height: getProportionateScreenHeight(200),
             decoration: BoxDecoration(
               color: color,
