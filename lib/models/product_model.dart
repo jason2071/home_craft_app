@@ -108,10 +108,21 @@ List<ProductModel> productList = [
       "https://i.pinimg.com/564x/ca/eb/bf/caebbf003ce4adf19fbe1829f6ee0f3c.jpg",
       "https://i.pinimg.com/564x/ce/57/cf/ce57cf8f3854e1dd1fd72c89d0093d43.jpg",
     ],
-    colors: [
-      Color(0xFFD2B99B),
-      Color(0xFF664429),
-      Color(0xFF2C130E),
+    colors: [],
+  ),
+  ProductModel(
+    id: "6",
+    title: "Graden",
+    detail:
+        "Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+    prize: 19720,
+    amount: 50,
+    cover:
+        "https://i.pinimg.com/564x/bf/f6/5c/bff65ce468bd42f06bfa324267bf509c.jpg",
+    images: [
+      "https://i.pinimg.com/564x/ba/39/bf/ba39bf24ff7125ba1f0ff87c567c2499.jpg",
+      "https://i.pinimg.com/564x/7e/db/e5/7edbe54d9c13260b9e7f85f8d0696a9d.jpg",
     ],
+    colors: [],
   ),
 ];
