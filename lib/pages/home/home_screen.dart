@@ -4,6 +4,7 @@ import 'package:home_craft_app/constants.dart';
 import 'package:home_craft_app/models/category_model.dart';
 import 'package:home_craft_app/size_config.dart';
 import 'components/category_item.dart';
+import 'components/collection_item.dart';
 import 'components/trend_item.dart';
 
 class HomeScreen extends StatelessWidget {
@@ -93,13 +94,6 @@ class HomeScreen extends StatelessWidget {
                 ),
               ),
               SizedBox(height: 20),
-              // TrendItem(
-              //   imageSrc: "assets/images/target.png",
-              //   title: "Target",
-              //   prize: "29.00",
-              //   onPressed: () {},
-              // )
-
               ...List.generate(
                 3,
                 (index) => TrendItem(
@@ -108,6 +102,25 @@ class HomeScreen extends StatelessWidget {
                   prize: "29.00",
                   onPressed: () {},
                 ),
+              ),
+              SizedBox(height: 20),
+              Container(
+                height: 170,
+                child: SingleChildScrollView(
+                  scrollDirection: Axis.horizontal,
+                  child: Row(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      SizedBox(width: 20),
+                      ...List.generate(3, (index) => CollectionItem()),
+                    ],
+                  ),
+                ),
+              ),
+              SizedBox(height: 10),
+              Container(
+                height: 100,
+                color: Colors.red,
               ),
             ],
           ),
