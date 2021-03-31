@@ -1,8 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:home_craft_app/constants.dart';
+import 'package:home_craft_app/controllers/category_controller.dart';
 import 'package:home_craft_app/models/category_model.dart';
 import 'package:home_craft_app/models/product_model.dart';
+import 'package:home_craft_app/pages/category/category_screen.dart';
 import 'package:home_craft_app/size_config.dart';
+import 'package:provider/provider.dart';
 import 'components/categoey_item.dart';
 import 'components/grid_list.dart';
 import 'components/row_list.dart';
@@ -62,7 +65,16 @@ class _HomeScreenState extends State<HomeScreen> {
                         (index) => CategoryItem(
                           title: categories[index].title,
                           imageSrc: categories[index].imageSrc,
-                          onPressed: () {},
+                          onPressed: () {
+                            context
+                                .read<CategoryController>()
+                                .activeCategoryData(categories[index]);
+
+                            Navigator.pushNamed(
+                              context,
+                              CategoryScreen.routeName,
+                            );
+                          },
                         ),
                       ),
                     ],
