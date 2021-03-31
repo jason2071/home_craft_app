@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 const kPrimaryColor = Color(0xFF242A39);
-const kBackgroundColor = Color(0xFFF5F6F8);
+const kBackgroundColor = Color(0xFFF3F3F1);
 
 final kDefaultShadow = BoxShadow(
   spreadRadius: 1,

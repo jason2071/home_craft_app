@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:home_craft_app/constants.dart';
 import 'package:home_craft_app/models/category_model.dart';
 import 'package:home_craft_app/size_config.dart';
 import 'components/category_item.dart';
@@ -88,6 +89,25 @@ class HomeScreen extends StatelessWidget {
               ),
             ),
             SizedBox(height: 20),
+            Padding(
+              padding: EdgeInsets.symmetric(horizontal: 20),
+              child: Row(
+                children: [
+                  Container(
+                    width: 100,
+                    height: 100,
+                    padding: EdgeInsets.symmetric(horizontal: 6),
+                    alignment: Alignment.center,
+                    decoration: BoxDecoration(
+                        color: Colors.lightBlue.shade100,
+                        borderRadius: BorderRadius.circular(10)),
+                    child: Image.asset("assets/images/target.png"),
+                  ),
+                  Column(),
+                  Container(),
+                ],
+              ),
+            ),
           ],
         ),
       ),
