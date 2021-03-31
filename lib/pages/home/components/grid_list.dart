@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:home_craft_app/models/product_model.dart';
+import 'package:home_craft_app/pages/detail/detail_screen.dart';
 
 import 'product_item.dart';
 
@@ -10,6 +11,10 @@ class GridList extends StatelessWidget {
   }) : super(key: key);
 
   final List<ProductModel> data;
+
+  void _switchPage(BuildContext context) {
+    Navigator.pushNamed(context, DetailScreen.routeName);
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -28,7 +33,9 @@ class GridList extends StatelessWidget {
                           imageSrc: data[index].cover,
                           title: data[index].title,
                           prize: data[index].prize.toString(),
-                          onPressed: () {},
+                          onPressed: () {
+                            _switchPage(context);
+                          },
                         )
                       : Container();
                 },
@@ -46,7 +53,9 @@ class GridList extends StatelessWidget {
                           imageSrc: data[index].cover,
                           title: data[index].title,
                           prize: data[index].prize.toString(),
-                          onPressed: () {},
+                          onPressed: () {
+                            _switchPage(context);
+                          },
                         )
                       : Container();
                 },

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:home_craft_app/models/product_model.dart';
+import 'package:home_craft_app/pages/detail/detail_screen.dart';
 import 'package:home_craft_app/pages/home/components/product_row_item.dart';
 
 class RowList extends StatelessWidget {
@@ -23,7 +24,9 @@ class RowList extends StatelessWidget {
               data.length,
               (index) => ProductRowItem(
                 data: data[index],
-                onPressed: () {},
+                onPressed: () {
+                  Navigator.pushNamed(context, DetailScreen.routeName);
+                },
               ),
             ),
           ],
