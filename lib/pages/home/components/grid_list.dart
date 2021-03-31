@@ -20,34 +20,36 @@ class GridList extends StatelessWidget {
         children: [
           Column(
             children: [
-              ProductItem(
-                imageSrc: "assets/images/furniture/minimal-923194_1920.jpeg",
-                title: "Title",
-                prize: "1,000",
-                onPressed: () {},
+              ...List.generate(
+                data.length,
+                (index) {
+                  return (index % 2 == 0)
+                      ? ProductItem(
+                          imageSrc: data[index].cover,
+                          title: data[index].title,
+                          prize: data[index].prize.toString(),
+                          onPressed: () {},
+                        )
+                      : Container();
+                },
               ),
-              ProductItem(
-                imageSrc: "assets/images/furniture/workplace-5517744_1920.jpeg",
-                title: "Title",
-                prize: "1,000",
-                onPressed: () {},
-              )
             ],
           ),
           SizedBox(width: 6),
           Column(
             children: [
-              ProductItem(
-                imageSrc: "assets/images/furniture/workplace-5517744_1920.jpeg",
-                title: "loremsamfwbrebgnbgwrnpmdfb;msdfnbebnreihnfbnfdibnin",
-                prize: "1,000",
-                onPressed: () {},
-              ),
-              ProductItem(
-                imageSrc: "assets/images/furniture/minimal-923194_1920.jpeg",
-                title: "Title",
-                prize: "1,000",
-                onPressed: () {},
+              ...List.generate(
+                data.length,
+                (index) {
+                  return (index % 2 == 1)
+                      ? ProductItem(
+                          imageSrc: data[index].cover,
+                          title: data[index].title,
+                          prize: data[index].prize.toString(),
+                          onPressed: () {},
+                        )
+                      : Container();
+                },
               ),
             ],
           ),

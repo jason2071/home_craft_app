@@ -87,4 +87,21 @@ List<ProductModel> productList = [
       Color(0xFF2C130E),
     ],
   ),
+  ProductModel(
+    id: "5",
+    title: "Apartment Room, Interior Design",
+    detail: "Bedroom Bed Apartment Room Interior Design",
+    prize: 19720,
+    amount: 50,
+    cover: "https://picsum.photos/600",
+    images: [
+      "https://picsum.photos/768/1024",
+      "https://picsum.photos/1024/768",
+    ],
+    colors: [
+      Color(0xFFD2B99B),
+      Color(0xFF664429),
+      Color(0xFF2C130E),
+    ],
+  ),
 ];
