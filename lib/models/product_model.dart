@@ -29,11 +29,10 @@ List<ProductModel> productList = [
     detail: "Bedroom Bed Apartment Room Interior Design",
     prize: 19720,
     amount: 50,
-    cover:
-        "https://cdn.pixabay.com/photo/2014/08/11/21/40/bedroom-416062_960_720.jpg",
+    cover: "https://picsum.photos/500",
     images: [
-      "https://cdn.pixabay.com/photo/2014/08/11/21/40/bedroom-416062_960_720.jpg",
-      "https://cdn.pixabay.com/photo/2014/07/10/17/17/bedroom-389254_960_720.jpg",
+      "https://picsum.photos/768/1024",
+      "https://picsum.photos/1024/768",
     ],
     colors: [
       Color(0xFFD2B99B),
@@ -47,11 +46,10 @@ List<ProductModel> productList = [
     detail: "Office Sitting Room Executive Business Desk",
     prize: 29990,
     amount: 50,
-    cover:
-        "https://cdn.pixabay.com/photo/2015/10/20/18/57/furniture-998265_960_720.jpg",
+    cover: "https://picsum.photos/768",
     images: [
-      "https://cdn.pixabay.com/photo/2015/10/20/18/57/furniture-998265_960_720.jpg",
-      "https://cdn.pixabay.com/photo/2015/04/20/06/46/office-730681_960_720.jpg",
+      "https://picsum.photos/768",
+      "https://picsum.photos/768",
     ],
     colors: [
       Color(0xFF664429),
@@ -64,11 +62,10 @@ List<ProductModel> productList = [
     detail: "Kitchen Home Interior Modern Room Floor Furniture",
     prize: 34200,
     amount: 50,
-    cover:
-        "https://cdn.pixabay.com/photo/2017/03/22/17/39/kitchen-2165756_960_720.jpg",
+    cover: "https://picsum.photos/768/1024",
     images: [
-      "https://cdn.pixabay.com/photo/2017/03/22/17/39/kitchen-2165756_960_720.jpg",
-      "https://cdn.pixabay.com/photo/2016/12/26/17/28/food-1932466_960_720.jpg",
+      "https://picsum.photos/1024/768",
+      "https://picsum.photos/1024/768",
     ],
     colors: [
       Color(0xFF664429),
@@ -80,11 +77,10 @@ List<ProductModel> productList = [
     detail: "Brick Wall Room Interior Design Furniture",
     prize: 19720,
     amount: 50,
-    cover:
-        "https://cdn.pixabay.com/photo/2016/11/22/19/11/brick-wall-1850095_960_720.jpg",
+    cover: "https://picsum.photos/1024",
     images: [
-      "https://cdn.pixabay.com/photo/2016/11/22/19/11/brick-wall-1850095_960_720.jpg",
-      "https://cdn.pixabay.com/photo/2014/08/11/21/39/wall-416060_960_720.jpg",
+      "https://picsum.photos/1024",
+      "https://picsum.photos/1024",
     ],
     colors: [
       Color(0xFFD2B99B),
