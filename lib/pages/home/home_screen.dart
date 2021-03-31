@@ -20,6 +20,24 @@ class HomeScreen extends StatefulWidget {
 class _HomeScreenState extends State<HomeScreen> {
   bool _gridMode = false;
 
+  final elements = [
+    "Breakfast",
+    "Lunch",
+    "2nd Snack",
+    "Dinner",
+    "3rd Snack",
+  ];
+  String dropdownValue = 'Breakfast';
+
+  List<Widget> _buildItems() {
+    return elements.map<DropdownMenuItem<String>>((String value) {
+      return DropdownMenuItem<String>(
+        value: value,
+        child: Text(value),
+      );
+    }).toList();
+  }
+
   @override
   Widget build(BuildContext context) {
     SizeConfig().init(context);
@@ -66,9 +84,10 @@ class _HomeScreenState extends State<HomeScreen> {
                           title: categories[index].title,
                           imageSrc: categories[index].imageSrc,
                           onPressed: () {
-                            context
-                                .read<CategoryController>()
-                                .activeCategoryData(categories[index]);
+                            if (categories.isNotEmpty)
+                              context
+                                  .read<CategoryController>()
+                                  .activeCategoryData(categories[index]);
 
                             Navigator.pushNamed(
                               context,
@@ -93,24 +112,21 @@ class _HomeScreenState extends State<HomeScreen> {
                       ),
                     ),
                     Spacer(),
-                    GestureDetector(
-                      onTap: () {},
-                      child: Container(
-                        child: Row(
-                          children: [
-                            Text(
-                              "Popular",
-                              style: TextStyle(
-                                fontSize: getProportionateScreenWidth(16),
-                                fontWeight: FontWeight.w700,
-                              ),
-                            ),
-                            Icon(
-                              Icons.keyboard_arrow_down,
-                            )
-                          ],
-                        ),
+                    DropdownButton<String>(
+                      value: dropdownValue,
+                      icon: Icon(Icons.keyboard_arrow_down),
+                      underline: Container(),
+                      style: TextStyle(
+                        fontWeight: FontWeight.w600,
+                        color: Colors.black,
+                        fontSize: getProportionateScreenWidth(16),
                       ),
+                      onChanged: (newValue) {
+                        setState(() {
+                          dropdownValue = newValue;
+                        });
+                      },
+                      items: _buildItems(),
                     ),
                     SizedBox(width: 10),
                     GestureDetector(

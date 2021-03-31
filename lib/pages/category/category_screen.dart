@@ -7,10 +7,15 @@ class CategoryScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    CategoryController categoryController =
+        Provider.of<CategoryController>(context);
+
     return Scaffold(
-      appBar: AppBar(),
+      appBar: AppBar(
+        title: Text(categoryController.category.title),
+      ),
       body: Container(
-        child: Text(context.watch<CategoryController>().category.title),
+        child: Text(categoryController.category.title),
       ),
     );
   }
