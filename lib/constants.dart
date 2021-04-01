@@ -8,3 +8,5 @@ final kDefaultShadow = BoxShadow(
   blurRadius: 10,
   color: Colors.black12,
 );
+
+const kAnimationDuration = Duration(milliseconds: 200);
