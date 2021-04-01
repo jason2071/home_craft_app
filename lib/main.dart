@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:home_craft_app/controllers/category_notifier.dart';
 import 'package:home_craft_app/controllers/trending_notifier.dart';
-import 'package:home_craft_app/pages/home/home_screen.dart';
+import 'package:home_craft_app/pages/sign_in/sign_in_screen.dart';
 import 'package:home_craft_app/routes.dart';
 import 'package:provider/provider.dart';
 import 'theme.dart';
@@ -22,7 +22,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       theme: themData(),
-      initialRoute: HomeScreen.routeName,
+      initialRoute: SignInScreen.routeName,
       routes: routes,
     );
   }

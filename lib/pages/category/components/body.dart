@@ -2,9 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:home_craft_app/controllers/category_notifier.dart';
 import 'package:home_craft_app/controllers/trending_notifier.dart';
 import 'package:home_craft_app/models/product_model.dart';
-import 'package:home_craft_app/pages/home/components/category_item.dart';
-import 'package:home_craft_app/pages/home/components/collection_item.dart';
-import 'package:home_craft_app/pages/home/components/trend_item.dart';
+import 'package:home_craft_app/pages/category/components/category_item.dart';
+import 'package:home_craft_app/pages/category/components/collection_item.dart';
+import 'package:home_craft_app/pages/category/components/trend_item.dart';
 import 'package:home_craft_app/size_config.dart';
 import 'package:provider/provider.dart';
 

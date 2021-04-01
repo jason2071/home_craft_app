@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:home_craft_app/pages/home/components/body.dart';
+import 'package:home_craft_app/pages/category/components/body.dart';
 import 'package:home_craft_app/size_config.dart';
 
-class HomeScreen extends StatelessWidget {
+class CategoryScreen extends StatelessWidget {
   static const routeName = '/home';
 
   @override
@@ -25,8 +25,8 @@ class HomeScreen extends StatelessWidget {
             onPressed: () {},
           ),
         ],
-        backgroundColor: Colors.transparent,
       ),
+      extendBodyBehindAppBar: false,
       body: Body(),
     );
   }
