@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:home_craft_app/controllers/category_notifier.dart';
+import 'package:home_craft_app/controllers/trending_notifier.dart';
+import 'package:home_craft_app/models/product_model.dart';
 import 'package:home_craft_app/size_config.dart';
 import 'package:provider/provider.dart';
 
@@ -78,7 +80,7 @@ class HomeScreen extends StatelessWidget {
                   ],
                 ),
               ),
-              SizedBox(height: 20),
+              SizedBox(height: 30),
               Padding(
                 padding: EdgeInsets.symmetric(horizontal: 20),
                 child: Row(
@@ -107,15 +109,19 @@ class HomeScreen extends StatelessWidget {
               ),
               SizedBox(height: 20),
               ...List.generate(
-                3,
-                (index) => TrendItem(
-                  imageSrc: "assets/images/target.png",
-                  title: "Target",
-                  prize: "300",
-                  onPressed: () {},
-                ),
+                context.watch<TrendingNotifier>().trending.length,
+                (index) {
+                  ProductModel item =
+                      context.watch<TrendingNotifier>().trending[index];
+                  return TrendItem(
+                    imageSrc: item.cover,
+                    title: item.title,
+                    prize: item.prize.toString(),
+                    onPressed: () {},
+                  );
+                },
               ),
-              SizedBox(height: 20),
+              SizedBox(height: 30),
               Container(
                 height: 170,
                 child: SingleChildScrollView(

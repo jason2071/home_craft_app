@@ -34,7 +34,7 @@ class TrendItem extends StatelessWidget {
               borderRadius: BorderRadius.circular(12),
             ),
             padding: EdgeInsets.symmetric(horizontal: 8),
-            child: Image.asset("assets/images/target.png"),
+            child: Image.asset(imageSrc),
           ),
           Expanded(
             child: Column(
