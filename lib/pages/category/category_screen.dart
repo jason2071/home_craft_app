@@ -3,7 +3,7 @@ import 'package:home_craft_app/pages/category/components/body.dart';
 import 'package:home_craft_app/size_config.dart';
 
 class CategoryScreen extends StatelessWidget {
-  static const routeName = '/home';
+  static const routeName = '/category';
 
   @override
   Widget build(BuildContext context) {
