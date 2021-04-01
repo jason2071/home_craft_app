@@ -45,7 +45,7 @@ class CollectionItem extends StatelessWidget {
                 ),
                 Spacer(),
                 SizedBox(
-                  width: 72,
+                  width: getProportionateScreenWidth(65),
                   child: Column(
                     children: [
                       Row(
