@@ -46,6 +46,7 @@ class TrendItem extends StatelessWidget {
                         SizedBox(width: 15),
                         Column(
                           mainAxisAlignment: MainAxisAlignment.center,
+                          crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
                             Container(
                               constraints: BoxConstraints(
