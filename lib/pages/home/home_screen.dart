@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:home_craft_app/components/default_button.dart';
-import 'package:home_craft_app/constants.dart';
 import 'package:home_craft_app/models/category_model.dart';
 import 'package:home_craft_app/size_config.dart';
 import 'components/category_item.dart';
@@ -99,7 +97,7 @@ class HomeScreen extends StatelessWidget {
                 (index) => TrendItem(
                   imageSrc: "assets/images/target.png",
                   title: "Target",
-                  prize: "29.00",
+                  prize: "300",
                   onPressed: () {},
                 ),
               ),
