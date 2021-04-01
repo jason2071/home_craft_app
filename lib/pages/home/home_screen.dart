@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:home_craft_app/models/category_model.dart';
+import 'package:home_craft_app/controllers/category_notifier.dart';
 import 'package:home_craft_app/size_config.dart';
+import 'package:provider/provider.dart';
+
 import 'components/category_item.dart';
 import 'components/collection_item.dart';
 import 'components/trend_item.dart';
@@ -53,12 +55,24 @@ class HomeScreen extends StatelessWidget {
                   children: [
                     SizedBox(width: 20),
                     ...List.generate(
-                      categories.length,
+                      context.watch<CategoryNotifier>().categories.length,
                       (index) => CategoryItem(
-                        imageSrc: categories[index].imageSrc,
-                        title: categories[index].title,
-                        amount: categories[index].amount,
-                        color: categories[index].color,
+                        imageSrc: context
+                            .watch<CategoryNotifier>()
+                            .categories[index]
+                            .imageSrc,
+                        title: context
+                            .watch<CategoryNotifier>()
+                            .categories[index]
+                            .title,
+                        amount: context
+                            .watch<CategoryNotifier>()
+                            .categories[index]
+                            .amount,
+                        color: context
+                            .watch<CategoryNotifier>()
+                            .categories[index]
+                            .color,
                       ),
                     ),
                   ],
