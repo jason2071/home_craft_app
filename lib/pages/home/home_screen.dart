@@ -13,7 +13,7 @@ class HomeScreen extends StatelessWidget {
 
     return Scaffold(
       extendBodyBehindAppBar: true,
-      appBar: CustomAppBar(
+      appBar: AppBar(
         leading: IconButton(
           icon: Icon(Icons.menu, color: Colors.white),
           onPressed: () {},
