@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:home_craft_app/components/custom_app_bar.dart';
 import 'package:home_craft_app/size_config.dart';
 
 import 'components/body.dart';
