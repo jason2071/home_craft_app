@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:home_craft_app/size_config.dart';
 
-import '../../constants.dart';
 import 'components/header_slide.dart';
 
 class HomeScreen extends StatelessWidget {
