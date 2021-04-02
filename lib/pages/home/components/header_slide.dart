@@ -1,10 +1,20 @@
 import 'package:flutter/material.dart';
+import 'package:home_craft_app/components/slide_text_model.dart';
 
 import '../../../constants.dart';
 import '../../../size_config.dart';
 
 class HeaderSlide extends StatefulWidget {
-  HeaderSlide({Key key}) : super(key: key);
+  HeaderSlide({
+    Key key,
+    this.height = 350,
+    this.data,
+    this.image,
+  }) : super(key: key);
+
+  final double height;
+  final String image;
+  final List<SlideTextModel> data;
 
   @override
   _HeaderSlideState createState() => _HeaderSlideState();
@@ -12,34 +22,20 @@ class HeaderSlide extends StatefulWidget {
 
 class _HeaderSlideState extends State<HeaderSlide> {
   int currentpage = 0;
-  List<Map<String, String>> slideData = [
-    {
-      "title": "Make yourself \nat home",
-      "desc": "We love clean design and natural \nfurniture silutions",
-    },
-    {
-      "title": "Make yourself \nat home2",
-      "desc": "We love clean design and natural \nfurniture silutions2",
-    },
-    {
-      "title": "Make yourself \nat home3",
-      "desc": "We love clean design and natural \nfurniture silutions3",
-    },
-  ];
 
   @override
   Widget build(BuildContext context) {
     return Stack(
       children: [
         Image.network(
-          "https://i.pinimg.com/564x/c9/ba/c6/c9bac67e3204ada8c06f5a6f8b8fa05d.jpg",
+          widget.image,
           fit: BoxFit.cover,
-          height: SizeConfig.screenHeight * 0.35,
+          height: widget.height,
           width: SizeConfig.screenWidth,
         ),
         Container(
           padding: EdgeInsets.symmetric(horizontal: 20),
-          height: SizeConfig.screenHeight * 0.34,
+          height: widget.height,
           child: Column(
             children: [
               Expanded(
@@ -49,14 +45,14 @@ class _HeaderSlideState extends State<HeaderSlide> {
                       currentpage = value;
                     });
                   },
-                  itemCount: 3,
-                  itemBuilder: (_, index) => buildSlidetext(slideData[index]),
+                  itemCount: widget.data.length,
+                  itemBuilder: (_, index) => buildSlidetext(widget.data[index]),
                 ),
               ),
               SizedBox(height: 20),
               Row(
                 children: List.generate(
-                  slideData.length,
+                  widget.data.length,
                   (index) => buildDot(currentpage == index ? true : false),
                 ),
               ),
@@ -68,13 +64,13 @@ class _HeaderSlideState extends State<HeaderSlide> {
     );
   }
 
-  Column buildSlidetext(Map<String, String> item) {
+  Column buildSlidetext(SlideTextModel item) {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       mainAxisAlignment: MainAxisAlignment.end,
       children: [
         Text(
-          item['title'],
+          item.title,
           maxLines: 2,
           style: TextStyle(
             fontSize: 40,
@@ -84,7 +80,7 @@ class _HeaderSlideState extends State<HeaderSlide> {
           ),
         ),
         Text(
-          item['desc'],
+          item.desc,
           maxLines: 2,
           style: TextStyle(
             fontSize: 20,
