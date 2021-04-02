@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:home_craft_app/components/title_show_all.dart';
 import 'package:home_craft_app/controllers/category_notifier.dart';
 import 'package:home_craft_app/controllers/trending_notifier.dart';
 import 'package:home_craft_app/models/product_model.dart';
@@ -57,31 +58,9 @@ class Body extends StatelessWidget {
               ),
             ),
             SizedBox(height: 30),
-            Padding(
-              padding: EdgeInsets.symmetric(horizontal: 20),
-              child: Row(
-                children: [
-                  Text(
-                    "Trending",
-                    style: TextStyle(
-                      fontSize: 18,
-                      fontWeight: FontWeight.w600,
-                    ),
-                  ),
-                  Spacer(),
-                  GestureDetector(
-                    onTap: () {},
-                    child: Text(
-                      "Show all",
-                      style: TextStyle(
-                        fontSize: 14,
-                        fontWeight: FontWeight.w600,
-                      ),
-                    ),
-                  ),
-                  Icon(Icons.arrow_right),
-                ],
-              ),
+            TitleShowAll(
+              title: "Trending",
+              onPressed: () {},
             ),
             SizedBox(height: 20),
             ...List.generate(

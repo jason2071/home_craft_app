@@ -8,6 +8,7 @@ class ProductModel {
   final int amount;
   final String cover;
   final List<String> images;
+  final bool isFavorite;
 
   ProductModel({
     @required this.id,
@@ -17,5 +18,6 @@ class ProductModel {
     this.amount = 0,
     this.cover,
     this.images,
+    this.isFavorite = false,
   });
 }
