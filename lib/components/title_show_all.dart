@@ -26,7 +26,7 @@ class TitleShowAll extends StatelessWidget {
           ),
           Spacer(),
           GestureDetector(
-            onTap: () {},
+            onTap: onPressed,
             child: Text(
               "Show all",
               style: TextStyle(

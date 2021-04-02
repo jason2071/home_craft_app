@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:home_craft_app/components/custom_drawer.dart';
 import 'package:home_craft_app/size_config.dart';
 
 import 'components/body.dart';
@@ -8,16 +9,20 @@ class HomeScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final GlobalKey<ScaffoldState> _scaffoldKey = GlobalKey<ScaffoldState>();
     SizeConfig().init(context);
 
     return Scaffold(
+      key: _scaffoldKey,
       extendBodyBehindAppBar: true,
       appBar: AppBar(
         brightness: Brightness.dark,
         backgroundColor: Colors.transparent,
         leading: IconButton(
           icon: Icon(Icons.menu, color: Colors.white),
-          onPressed: () {},
+          onPressed: () {
+            _scaffoldKey.currentState.openDrawer();
+          },
         ),
         actions: [
           IconButton(
@@ -30,6 +35,7 @@ class HomeScreen extends StatelessWidget {
           ),
         ],
       ),
+      drawer: CustomDrawer(),
       body: Body(),
     );
   }

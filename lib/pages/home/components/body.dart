@@ -3,6 +3,7 @@ import 'package:home_craft_app/components/slide_text_model.dart';
 import 'package:home_craft_app/components/title_show_all.dart';
 import 'package:home_craft_app/controllers/horizontal_item.dart';
 import 'package:home_craft_app/controllers/new_arrival_notifier.dart';
+import 'package:home_craft_app/pages/show_all/show_all_screen.dart';
 import 'package:provider/provider.dart';
 import 'header_slide.dart';
 
@@ -23,7 +24,9 @@ class Body extends StatelessWidget {
               ),
               TitleShowAll(
                 title: "New Arrivals",
-                onPressed: () {},
+                onPressed: () {
+                  Navigator.pushNamed(context, ShowAllScreen.routeName);
+                },
               ),
               SingleChildScrollView(
                 scrollDirection: Axis.horizontal,
@@ -43,7 +46,9 @@ class Body extends StatelessWidget {
               ),
               TitleShowAll(
                 title: "Top Trends",
-                onPressed: () {},
+                onPressed: () {
+                  Navigator.pushNamed(context, ShowAllScreen.routeName);
+                },
               ),
               SingleChildScrollView(
                 scrollDirection: Axis.horizontal,
@@ -63,7 +68,9 @@ class Body extends StatelessWidget {
               ),
               TitleShowAll(
                 title: "Best sellers",
-                onPressed: () {},
+                onPressed: () {
+                  Navigator.pushNamed(context, ShowAllScreen.routeName);
+                },
               ),
               SingleChildScrollView(
                 scrollDirection: Axis.horizontal,
