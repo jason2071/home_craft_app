@@ -1,10 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:home_craft_app/components/title_show_all.dart';
-import 'package:home_craft_app/controllers/horizontal_item.dart';
-import 'package:home_craft_app/controllers/new_arrival_notifier.dart';
+import 'package:home_craft_app/components/custom_app_bar.dart';
 import 'package:home_craft_app/size_config.dart';
-import 'package:provider/provider.dart';
-import 'components/header_slide.dart';
+
+import 'components/body.dart';
 
 class HomeScreen extends StatelessWidget {
   static const routeName = '/home';
@@ -15,9 +13,7 @@ class HomeScreen extends StatelessWidget {
 
     return Scaffold(
       extendBodyBehindAppBar: true,
-      appBar: AppBar(
-        backgroundColor: Colors.transparent,
-        brightness: Brightness.dark,
+      appBar: CustomAppBar(
         leading: IconButton(
           icon: Icon(Icons.menu, color: Colors.white),
           onPressed: () {},
@@ -33,79 +29,7 @@ class HomeScreen extends StatelessWidget {
           ),
         ],
       ),
-      body: Container(
-        width: double.infinity,
-        child: SafeArea(
-          top: false,
-          child: SingleChildScrollView(
-            child: Column(
-              children: [
-                HeaderSlide(),
-                TitleShowAll(
-                  title: "New Arrivals",
-                  onPressed: () {},
-                ),
-                SingleChildScrollView(
-                  scrollDirection: Axis.horizontal,
-                  child: Row(
-                    children: [
-                      SizedBox(width: 20),
-                      ...List.generate(
-                        context.watch<NewArrivalNotifier>().newArrivals.length,
-                        (index) => HorizontalItem(
-                          product: context
-                              .watch<NewArrivalNotifier>()
-                              .newArrivals[index],
-                        ),
-                      ),
-                    ],
-                  ),
-                ),
-                TitleShowAll(
-                  title: "Top Trends",
-                  onPressed: () {},
-                ),
-                SingleChildScrollView(
-                  scrollDirection: Axis.horizontal,
-                  child: Row(
-                    children: [
-                      SizedBox(width: 20),
-                      ...List.generate(
-                        context.watch<NewArrivalNotifier>().newArrivals.length,
-                        (index) => HorizontalItem(
-                          product: context
-                              .watch<NewArrivalNotifier>()
-                              .newArrivals[index],
-                        ),
-                      ),
-                    ],
-                  ),
-                ),
-                TitleShowAll(
-                  title: "Best sellers",
-                  onPressed: () {},
-                ),
-                SingleChildScrollView(
-                  scrollDirection: Axis.horizontal,
-                  child: Row(
-                    children: [
-                      SizedBox(width: 20),
-                      ...List.generate(
-                        context.watch<NewArrivalNotifier>().newArrivals.length,
-                        (index) => HorizontalItem(
-                          product: context
-                              .watch<NewArrivalNotifier>()
-                              .newArrivals[index],
-                        ),
-                      ),
-                    ],
-                  ),
-                ),
-              ],
-            ),
-          ),
-        ),
-      ),
+      body: Body(),
     );
   }
 }
