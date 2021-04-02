@@ -81,6 +81,26 @@ class HomeScreen extends StatelessWidget {
                     ],
                   ),
                 ),
+                TitleShowAll(
+                  title: "Best sellers",
+                  onPressed: () {},
+                ),
+                SingleChildScrollView(
+                  scrollDirection: Axis.horizontal,
+                  child: Row(
+                    children: [
+                      SizedBox(width: 20),
+                      ...List.generate(
+                        context.watch<NewArrivalNotifier>().newArrivals.length,
+                        (index) => HorizontalItem(
+                          product: context
+                              .watch<NewArrivalNotifier>()
+                              .newArrivals[index],
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
               ],
             ),
           ),
