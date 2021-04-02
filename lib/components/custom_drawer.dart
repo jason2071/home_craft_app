@@ -48,25 +48,42 @@ class CustomDrawer extends StatelessWidget {
             ),
           ),
           DrawerItem(
-            title: 'Dashboard',
-            iconData: Icons.dashboard,
+            title: 'Favorite',
+            iconData: Icons.favorite_border,
             onPressed: () {},
           ),
           DrawerItem(
-            title: 'Explore',
-            iconData: Icons.explore,
+            title: 'Order',
+            iconData: Icons.list_alt,
             onPressed: () {},
           ),
           DrawerItem(
-            title: 'Discover',
-            iconData: Icons.access_alarm,
+            title: 'Profile',
+            iconData: Icons.person_outline,
+            onPressed: () {},
+          ),
+          DrawerItem(
+            title: 'Address',
+            iconData: Icons.pin_drop_outlined,
+            onPressed: () {},
+          ),
+          DrawerItem(
+            title: 'Credit Card',
+            iconData: Icons.credit_card,
             onPressed: () {},
           ),
           Divider(),
           DrawerItem(
+            title: 'Setting',
+            onPressed: () {},
+          ),
+          DrawerItem(
+            title: 'Privacy Policy',
+            onPressed: () {},
+          ),
+          DrawerItem(
             title: 'Logout',
             color: Colors.red.shade900,
-            iconData: Icons.logout,
             onPressed: () {},
           ),
         ],
@@ -79,7 +96,7 @@ class DrawerItem extends StatelessWidget {
   const DrawerItem({
     Key key,
     @required this.title,
-    this.iconData = Icons.home,
+    this.iconData,
     this.color = Colors.black54,
     @required this.onPressed,
   }) : super(key: key);
@@ -99,7 +116,7 @@ class DrawerItem extends StatelessWidget {
           color: color,
         ),
       ),
-      leading: Icon(iconData, color: color),
+      leading: iconData != null ? Icon(iconData, color: Colors.black87) : null,
       onTap: () {
         onPressed();
         Navigator.pop(context);
