@@ -34,12 +34,12 @@ class _HeaderSlideState extends State<HeaderSlide> {
         Image.network(
           "https://i.pinimg.com/564x/c9/ba/c6/c9bac67e3204ada8c06f5a6f8b8fa05d.jpg",
           fit: BoxFit.cover,
-          height: SizeConfig.screenHeight * 0.33,
+          height: SizeConfig.screenHeight * 0.35,
           width: SizeConfig.screenWidth,
         ),
         Container(
           padding: EdgeInsets.symmetric(horizontal: 20),
-          height: SizeConfig.screenHeight * 0.33,
+          height: SizeConfig.screenHeight * 0.34,
           child: Column(
             children: [
               Expanded(
