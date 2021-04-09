@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:home_craft_app/components/title_show_all.dart';
-import 'package:home_craft_app/controllers/horizontal_item.dart';
+import 'package:home_craft_app/components/horizontal_item.dart';
 import 'package:home_craft_app/controllers/new_arrival_notifier.dart';
 import 'package:home_craft_app/pages/show_all/show_all_screen.dart';
 import 'package:provider/provider.dart';

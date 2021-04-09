@@ -25,20 +25,22 @@ class TitleShowAll extends StatelessWidget {
             ),
           ),
           Spacer(),
-          GestureDetector(
-            onTap: onPressed,
-            child: Text(
-              "Show all",
-              style: TextStyle(
-                fontSize: getProportionateScreenWidth(14),
-                fontWeight: FontWeight.w500,
+          if (onPressed != null)
+            GestureDetector(
+              onTap: onPressed,
+              child: Text(
+                "Show all",
+                style: TextStyle(
+                  fontSize: getProportionateScreenWidth(14),
+                  fontWeight: FontWeight.w500,
+                ),
               ),
             ),
-          ),
-          Icon(
-            Icons.arrow_right,
-            size: 26,
-          ),
+          if (onPressed != null)
+            Icon(
+              Icons.arrow_right,
+              size: 26,
+            ),
         ],
       ),
     );
