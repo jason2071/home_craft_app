@@ -56,7 +56,7 @@ class ShowAllScreen extends StatelessWidget {
                       Text(
                         "Cyber Monday",
                         style: TextStyle(
-                          color: Colors.grey.shade200,
+                          color: Colors.grey,
                           fontWeight: FontWeight.w300,
                           fontSize: getProportionateScreenWidth(18),
                         ),
